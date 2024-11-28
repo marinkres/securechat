@@ -9,7 +9,7 @@ export const Header: React.FC<{ toggleUserList: () => void; isUserListOpen: bool
   const { currentUser, selectedUser } = useChatStore();
 
   return (
-    <header className="bg-[#2c2c2e]/90 glass-effect border-b border-[#3c3c3e] fixed top-0 left-0 w-full z-10">
+    <header className="header bg-[#2c2c2e]/90 glass-effect border-b border-[#3c3c3e] fixed top-0 left-0 w-full z-10">
       <div className="w-full px-0 py-3">
         <div className="flex items-center justify-between">
           {/* Left Section */}
@@ -17,7 +17,7 @@ export const Header: React.FC<{ toggleUserList: () => void; isUserListOpen: bool
             {/* Toggle Button */}
             <button
               onClick={toggleUserList}
-              className="p-2 rounded-lg bg-[#3c3c3e] text-gray-400 hover:bg-[#4c4c4e]"
+              className="toggle-button p-2 rounded-lg bg-[#3c3c3e] text-gray-400 hover:bg-[#4c4c4e]"
             >
               {isUserListOpen ? <ChevronLeft /> : <ChevronRight />}
             </button>
@@ -45,3 +45,4 @@ export const Header: React.FC<{ toggleUserList: () => void; isUserListOpen: bool
     </header>
   );
 };
+
