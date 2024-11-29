@@ -17,7 +17,7 @@ export const UserList: React.FC<{ toggleUserList?: () => void }> = ({ toggleUser
   };
 
   return (
-    <div className="relative transition-all duration-300 flex flex-col w-72 bg-[#2c2c2e]/90 glass-effect border-r border-[#3c3c3e]">
+    <div className="sidebar relative transition-all duration-300 flex flex-col bg-[#2c2c2e]/90 glass-effect border-r border-[#3c3c3e]">
       {/* Users Section */}
       <div className="p-4">
         <div className="flex items-center gap-2 mb-6">
@@ -25,7 +25,9 @@ export const UserList: React.FC<{ toggleUserList?: () => void }> = ({ toggleUser
           <h2 className="text-lg font-semibold text-white">Users</h2>
         </div>
 
-        
+        <div className="text-gray-400 mb-4">
+          Logged in as: <strong>{currentUser?.username}</strong>
+        </div>
 
         <div className="space-y-2">
           <button
@@ -59,9 +61,6 @@ export const UserList: React.FC<{ toggleUserList?: () => void }> = ({ toggleUser
 
       {/* Bottom Section */}
       <div className="mt-auto p-4 border-t border-[#3c3c3e] space-y-4">
-      <div className="text-gray-400 mb-4">
-          Logged in as: <strong>{currentUser?.username}</strong>
-        </div>
         {/* Learn More */}
         <div className="text-sm text-gray-400 flex items-start gap-2">
           <Lock className="w-4 h-4 mt-0.5 text-blue-400 shrink-0" />
