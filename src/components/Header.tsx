@@ -6,7 +6,7 @@ export const Header: React.FC<{ toggleUserList: () => void; isUserListOpen: bool
   toggleUserList,
   isUserListOpen,
 }) => {
-  const { currentUser, selectedUser } = useChatStore();
+  const { selectedUser } = useChatStore();
 
   return (
     <header className="header bg-[#2c2c2e]/90 glass-effect border-b border-[#3c3c3e] fixed top-0 left-0 w-full z-10">
@@ -28,16 +28,15 @@ export const Header: React.FC<{ toggleUserList: () => void; isUserListOpen: bool
               <h1 className="text-xl font-semibold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                 Secure Chat
               </h1>
-              <span className="text-sm text-gray-400">- Logged in as: {currentUser?.username}</span>
             </div>
           </div>
 
           {/* Right Section */}
           <div className="text-gray-400 pr-4"> {/* Right-side padding for consistent spacing */}
             {selectedUser ? (
-              <span>Chatting with {selectedUser.username}</span>
+              <p>Chatting with {selectedUser.username}</p>
             ) : (
-              <span>Public Channel</span>
+              <p>Public Channel</p>
             )}
           </div>
         </div>
@@ -45,4 +44,3 @@ export const Header: React.FC<{ toggleUserList: () => void; isUserListOpen: bool
     </header>
   );
 };
-
