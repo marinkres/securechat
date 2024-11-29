@@ -54,6 +54,17 @@ html, body {
   flex: 1; /* Allow main area to grow and shrink */
   overflow-y: auto; /* Enable vertical scroll if needed */
   padding: 1rem;
+  padding-bottom: 80px; /* Add padding to make space for the input box */
+}
+
+.chat-input {
+  position: fixed; /* Fix the chat input at the bottom */
+  bottom: 0;
+  width: 100%;
+  background-color: #2c2c2e;
+  padding: 1rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 @media (max-width: 768px) {
@@ -81,5 +92,10 @@ html, body {
 
   .main-area {
     padding-top: 50px; /* Adjust padding to match header height */
+    padding-bottom: 70px; /* Adjust padding to match chat input height */
+  }
+
+  .chat-input {
+    padding: 0.5rem; /* Adjust padding for mobile */
   }
 }

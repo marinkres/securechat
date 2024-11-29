@@ -27,10 +27,7 @@ export const ChatInput: React.FC = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="p-4 bg-[#2c2c2e]/90 glass-effect border-t border-[#3c3c3e]"
-    >
+    <form onSubmit={handleSubmit} className="chat-input">
       <div className="flex gap-3">
         <input
           type="text"

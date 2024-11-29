@@ -14,6 +14,7 @@ export const UserList: React.FC<{ toggleUserList?: () => void }> = ({ toggleUser
     } else if (currentUser && !user) {
       fetchMessages(currentUser.id, 'everyone'); // Fetch messages for the public channel or everyone
     }
+    if (toggleUserList) toggleUserList(); // Close sidebar when "Everyone" is selected
   };
 
   return (
@@ -25,9 +26,7 @@ export const UserList: React.FC<{ toggleUserList?: () => void }> = ({ toggleUser
           <h2 className="text-lg font-semibold text-white">Users</h2>
         </div>
 
-        <div className="text-gray-400 mb-4">
-          Logged in as: <strong>{currentUser?.username}</strong>
-        </div>
+        
 
         <div className="space-y-2">
           <button
@@ -62,6 +61,9 @@ export const UserList: React.FC<{ toggleUserList?: () => void }> = ({ toggleUser
       {/* Bottom Section */}
       <div className="mt-auto p-4 border-t border-[#3c3c3e] space-y-4">
         {/* Learn More */}
+        <div className="text-gray-400 mb-4 text-sm">
+          Logged in as: <strong>{currentUser?.username}</strong>
+        </div>
         <div className="text-sm text-gray-400 flex items-start gap-2">
           <Lock className="w-4 h-4 mt-0.5 text-blue-400 shrink-0" />
           <div>
