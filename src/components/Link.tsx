@@ -27,3 +27,4 @@ export const Link: React.FC<LinkProps> = ({ to, children, external = false }) =>
     </a>
   );
 };
+

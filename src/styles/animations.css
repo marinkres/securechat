@@ -76,9 +76,6 @@ html, body {
   .header h1 {
     font-size: 1rem; /* Smaller font size on mobile */
   }
-  .header p{
-    font-size: 0.8rem;
-  }
 
   .sidebar {
     margin-top: 50px; /* Adjust margin for mobile */

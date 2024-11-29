@@ -4,11 +4,12 @@ import { Link } from '../components/Link';
 
 export const Encryption: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#1c1c1e] text-white p-8">
+    <div className="min-h-screen bg-[#1c1c1e] text-white p-8 overflow-auto">
       <div className="max-w-3xl mx-auto">
-        <div className="inline-flex items-center gap-2 mb-12 hover:text-blue-400">
+        <div className="inline-flex items-center gap-2 mb-12">
           <Link to="/">
-            <ArrowLeft className="w-4 h-4" /> Back to Chat
+            <ArrowLeft className="w-4 h-4" />
+            <span className="hover:text-blue-400"> Back to Chat</span>
           </Link>
         </div>
 
